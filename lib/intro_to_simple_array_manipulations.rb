@@ -16,7 +16,7 @@ def pop_with_args(a)
 end
 
 def using_shift(a)
-  a.shift a
+  a.shift
 end
 
 def shift_with_args(a)
