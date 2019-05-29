@@ -28,7 +28,7 @@ def using_concat(a, b)
 end
 
 def using_insert(a, s)
-  a.insert(s, 4)
+  a.insert(4, s)
 end
 
 def using_uniq(a)
