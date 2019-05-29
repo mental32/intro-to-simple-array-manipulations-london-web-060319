@@ -23,43 +23,16 @@ def shift_with_args(a)
   a.shift 2
 end
 
-describe "#using_concat" do 
-  before(:each) do 
-    @my_favorite_things = ["raindrops on roses", "whiskers on kittens"]
-    more_favs = ["mario kart", "flatiron school"]
-    @all_my_favs = using_concat(@my_favorite_things, more_favs)
-  end
-   it "takes in two arguments of two different arrays and uses the concat method to add the contents of the second array to the first" do 
-    expect(@all_my_favs).to eq(["raindrops on roses", "whiskers on kittens", "mario kart", "flatiron school"])
-   end
-
-   it "increases the length of the first array" do 
-    expect(@my_favorite_things.length).to be > 2
-   end
+def using_concat(a, b)
+  a.concat(b)
 end
 
-describe "#using_insert" do 
-  before(:each) do 
-    @list_of_esoteric_programming_languages = ["Ante", "ArnoldC", "Befunge", "Binary lambda calculus", "Chef", "GolfScript", "Ook!"]
-    @another_esoteric_language = "Malbolge"
-    @new_array = using_insert(@list_of_esoteric_programming_languages, @another_esoteric_language)
-  end
-
-  it "takes in two arguments, an array and a new element to be added to the array. it uses the insert method to add the new element to the 4th index of the array" do 
-    expect(@new_array[4]).to eq(@another_esoteric_language)
-  end
-
-  it "increases the length of the array" do 
-    expect(@new_array.length).to eq(8)
-  end
+def using_insert(a, s)
+  a.insert(s, 4)
 end
 
-describe "#using_uniq" do 
-  it "takes in an argument of an array and uses the uniq method to remove any duplicate items" do
-    captain_planet_and_the_planeteers = ["Captain Planet", "Gaia", "Kwame", "Gi", "Linka", "Wheeler", "Gaia"]
-    new_array = using_uniq(captain_planet_and_the_planeteers)
-    expect(new_array).to eq(["Captain Planet", "Gaia", "Kwame", "Gi", "Linka", "Wheeler"])
-  end
+def using_uniq(a)
+  a.uniq
 end
 
 describe "#using_flatten" do 
